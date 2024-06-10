@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 void print(int* arr, int n)
 {
     int i;
@@ -54,5 +55,10 @@ int main()
 {
     int arr[] = {3,2,5,7,83,8,34,63,};
     int n = sizeof(arr)/sizeof(arr[0]);
+    printf("Before sorting:\n");
+    print(arr, n);
+    mergesort(arr, 0, n - 1);
+    printf("After sorting:\n");
+    print(arr, n);
     return 0;
 }
