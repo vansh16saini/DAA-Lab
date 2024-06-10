@@ -29,12 +29,12 @@ void merge(int left[], int right[], int lsize, int rsize, int merged[])
 }
 void mergesort(int arr[], int s, int e)
 {
-    if(s<e)
+    if(s<e){
         int mid = (s + e) / 2;
         mergesort(arr,s,mid);
         mergesort(arr,mid+1,e);
         int lsize = mid-s+1,rsize = e-mid;
-        int* left = malloc(lsize*sizeof(int));        int* rsize = 
+        int* left = malloc(lsize*sizeof(int));
         int* right = malloc(rsize*sizeof(int));
         int i;
         for(i=0;i<lsize;i++)
@@ -49,7 +49,8 @@ void mergesort(int arr[], int s, int e)
             arr[s + i] = merged[i];
 
         free(left);
-        free(right);    
+        free(right); 
+    }       
 }
 int main()
 {
