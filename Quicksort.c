@@ -5,7 +5,7 @@ void print(int* arr, int n)
     int i;
     for(i=0;i<n;i++)
     {
-        printf("%d/t",arr[i]);
+        printf("%d\t",arr[i]);
     }
 }
 
@@ -49,7 +49,7 @@ int main()
     printf("Before sorting:\n");
     print(arr, n);
     quicksort(arr, 0, n - 1);
-    printf("After sorting:\n");
+    printf("\nAfter sorting:\n");
     print(arr, n);
     return 0;
 }
